@@ -1,8 +1,6 @@
 .resolucion {
     width: 99%;
     text-align: center;
-}
-
 
 /**Movil**/
 
@@ -512,3 +510,4 @@ border-radius: 1rem;
   transform: scale(0.9);
   border-radius: 1rem;
   }
+}
