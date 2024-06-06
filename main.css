@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --ff-text: 'Rubik', sans-serif;
+  --clr-black: #1c1c1c;
+  --clr-white: #ececec;
+  --bg-white: url("../img/white.jpg");
+  --bg-black: url("../img/black.jpg");
+  --bg-green: url("../img/green.jpg");
+}
+
+body{
+background-image: var(--bg-white);
+color: var(--clr-black);
+font-family: var(--ff-text);
+font-style: color(white);
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+ul {
+list-style-type: none;
+}
+
+h1, h2, h3 {
+font-family: var(--ff-text);
+}
+
+.container {
+max-width: 1000px;
+margin: 0 auto;
+padding-inline: 2rem;
+}
+
+.main-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 3rem;
+padding-bottom: 0;
+}
+
+.logo {
+max-width: 5px;
+}
+
+.nav-list {
+display: flex;
+gap: 1rem;
+}
+
+.nav-link {
+position: relative;
+}
+
+.nav-link::after {
+content: '';
+position: absolute;
+left: 0;
+right: 0;
+top: 100%;
+height: 2px;
+background-color: var(--clr-black);
+transform: scaleX(0);
+transition: .2s;
+}
+
+.nav-link:hover::after {
+transform: scaleX(1);
+}
+
+.nav-link-bold {
+font-weight: 500;
+}
+
+.quien-soy-inner {
+display: grid;
+grid-template-columns: .35fr 1fr;
+grid-template-areas:
+"foto titulo"
+"foto texto";
+padding-block: 3rem;
+column-gap: 2rem;
+row-gap: 1rem;
+}
+
+.quien-soy-foto {
+grid-area: foto;
+background-color: var(--bg-black);
+border-radius: 1rem;
+transform: scale(.9);
+align-self: start;
+}
+
+.quien-soy-foto img{
+max-width: 100%;
+transform: scale(1.2);
+border-radius: 1rem;
+}
+
+.quien-soy-title {
+grid-area: titulo;
+font-size: 3rem;
+line-height: 1.1;
+}
+
+.quien-soy-text {
+grid-area: texto;
+font-size: 1.25rem;
+line-height: 1.3;
+}
+
+.section {
+padding-block: 4rem;
+}
+
+.section-dark {
+background-image: var(--bg-black);
+color: var(--clr-white);
+}
+
+.section-reciclaje{
+background-image: var(--bg-green);
+color: var(--clr-black);
+}
+
+
+.section-inner {
+display: flex;
+flex-direction: column;
+align-items: start;
+gap: 1rem;
+}
+
+.section-title {
+font-size: 3rem;
+}
+
+.btn {
+padding: .5rem 1rem;
+font-weight: 500;
+display: flex;
+gap: .5rem;
+position: relative;
+transition: .2s;
+isolation: isolate;
+}
+
+.btn:hover {
+color: var(--clr-white);
+}
+
+.btn::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+height: 3px;
+background-color: var(--clr-black);
+transition: .2s;
+z-index: -1;
+}
+
+.btn:hover::after {
+height: 100%;
+}
+
+.section-text {
+font-size: 1.2rem;
+}
+
+.btns {
+display: flex;
+gap: 1rem;
+}
+
+.section-dark .btn:hover {
+color: var(--clr-black);
+}
+
+.section-dark .btn::after {
+background-color: var(--clr-white);
+}
+
+
+.acciones {
+display: grid;
+grid-template-columns: .35fr 1fr;
+grid-template-areas:
+"foto titulo"
+"foto texto";
+padding-block: 3rem;
+column-gap: 2rem;
+row-gap: 1rem;
+width: 600px;
+}
+
+.acciones-febrero {
+grid-area: foto;
+background-color: var(--bg-black);
+border-radius: 1rem;
+transform: scale(.9);
+}
+
+.acciones-febrero img {
+max-width: 100%;
+transform: scale(1.5);
+border-radius: 1rem;
+}
+
+.acciones2 {
+display: grid;
+grid-template-columns: .35fr 1fr;
+grid-template-areas:
+"foto titulo"
+"foto texto";
+padding-block: 3rem;
+column-gap: 2rem;
+row-gap: 1rem;
+align-self: self-end;
+width: 700px;
+height: 10px;
+position: relative;
+top: -420px;
+left: 170px;
+}
+
+.acciones-febrero2 {
+grid-area: Foto 2;
+background-color: var(--bg-black);
+border-radius: 1rem;
+transform: scale(.9);
+}
+
+.acciones-febrero2 img {
+max-width: 100%;
+transform: scale(1.5);
+border-radius: 1rem;
+}
+
+.acciones3 {
+display: grid;
+grid-template-columns: .35fr 1fr;
+grid-template-areas:
+"foto titulo"
+"foto texto";
+padding-block: 3rem;
+column-gap: 2rem;
+row-gap: 1rem;
+align-self: self-end;
+width: 300px;
+height: 10px;
+position: relative;
+top: -490px;
+left: 240px;
+}
+
+.acciones-febrero3 {
+grid-area: Foto 2;
+background-color: var(--bg-black);
+border-radius: 1rem;
+transform: scale(1.5);
+}
+
+.acciones-febrero3 img {
+max-width: 100%;
+transform: scale(2.5);
+border-radius: 1rem;
+}
+
+.acciones-marzo {
+grid-area: foto;
+background-color: var(--bg-black);
+border-radius: 1rem;
+transform: scale(.9);
+}
+
+.acciones-marzo img {
+max-width: 100%;
+transform: scale(1.5);
+border-radius: 1rem;
+}
+
+.acciones4 {
+display: grid;
+grid-template-columns: .35fr 1fr;
+grid-template-areas:
+"foto titulo"
+"foto texto";
+padding-block: 3rem;
+column-gap: 2rem;
+row-gap: 1rem;
+align-self: self-end;
+width: 550px;
+height: 10px;
+position: relative;
+top: -490px;
+left: -150px;
+}
+
+.acciones-marzo2 {
+grid-area: Foto 2;
+background-color: var(--bg-black);
+border-radius: 1rem;
+transform: scale(.9);
+}
+
+.acciones-marzo2 img {
+max-width: 100%;
+transform: scale(1.5);
+border-radius: 1rem;
+
+}
+
+.acciones5 {
+display: grid;
+grid-template-columns: .35fr 1fr;
+grid-template-areas:
+"foto titulo"
+"foto texto";
+padding-block: 3rem;
+column-gap: 2rem;
+row-gap: 1rem;
+align-self: self-end;
+width: 600px;
+height: 10px;
+position: relative;
+top: -580px;
+left: 380px;
+}
+
+.acciones-marzo3 {
+grid-area: Foto 2;
+background-color: var(--bg-black);
+border-radius: 1rem;
+transform: scale(3);
+}
+
+.acciones-marzo3 img {
+max-width: 100%;
+transform: scale(1.5);
+border-radius: 1rem;
+}
+
+.acciones6 {
+display: grid;
+grid-template-columns: .35fr 1fr;
+grid-template-areas:
+"foto titulo"
+"foto texto";
+padding-block: 3rem;
+column-gap: 2rem;
+row-gap: 1rem;
+align-self: self-end;
+width: 650px;
+height: 10px;
+position: relative;
+top: -350px;
+left: 430px;
+}
+
+.acciones-marzo4 {
+grid-area: Foto 4;
+background-color: var(--bg-black);
+border-radius: 1rem;
+transform: scale(2.5);
+}
+
+.acciones-marzo4 img {
+max-width: 100%;
+transform: scale(1.5);
+border-radius: 1rem;
+}
+
+.acciones7 {
+display: grid;
+grid-template-columns: .35fr 1fr;
+grid-template-areas:
+"foto titulo"
+"foto texto";
+padding-block: 3rem;
+column-gap: 2rem;
+row-gap: 1rem;
+align-self: self-end;
+width: 440px;
+height: 10px;
+position: relative;
+top: -130px;
+left: -480px;
+}
+
+.acciones-mayo5 {
+grid-area: Foto 4;
+background-color: var(--bg-black);
+border-radius: 1rem;
+transform: scale(1.6);
+}
+
+.acciones-mayo5 img {
+max-width: 100%;
+transform: scale(1.5);
+border-radius: 1rem;
+}
+
+.acciones8 {
+display: grid;
+grid-template-columns: .35fr 1fr;
+grid-template-areas:
+"foto titulo"
+"foto texto";
+padding-block: 3rem;
+column-gap: 2rem;
+row-gap: 1rem;
+align-self: self-end;
+width: 600px;
+height: 10px;
+position: relative;
+top: -295px;
+left: 100px;
+}
+
+.acciones-mayo6 {
+grid-area: Foto 2;
+background-color: var(--bg-black);
+border-radius: 1rem;
+transform: scale(0.7);
+}
+
+.acciones-mayo6 img {
+max-width: 100%;
+transform: scale(1.5);
+border-radius: 1rem;
+}
+
+.acciones9 {
+  display: grid;
+  grid-template-columns: .35fr 1fr;
+  grid-template-areas:
+  "foto titulo"
+  "foto texto";
+  padding-block: 3rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  align-self: self-end;
+  width: 1150px;
+  height: 10px;
+  position: relative;
+  top: -450px;
+  left: 1050px;
+  }
+  
+  .acciones-mayo7 {
+  grid-area: Foto 3;
+  background-color: var(--bg-black);
+  border-radius: 1rem;
+  transform: scale(1.0);
+  }
+  
+  .acciones-mayo7 img {
+  max-width: 100%;
+  transform: scale(0.9);
+  border-radius: 1rem;
+  }
